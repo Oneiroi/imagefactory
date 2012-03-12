@@ -78,7 +78,7 @@ _Example:_
     >
     > **OAuth protected:** YES
     >
-    > **Parameters:**  
+    > **Parameters:** 
     
     > > __template__ - string representation of XML document, UUID, or URL 
     > > __callback_url__ - A REST endpoint to post status updates to 
@@ -113,7 +113,7 @@ _Example:_
        either an existing base image or on a newly supplied template.
     >
     > **OAuth protected:** YES
-    >
+    
     > **Parameters:**  
     > > __base_image__ - UUID or URL 
     > > __template__ - string representation of XML document, UUID, or URL 
@@ -146,8 +146,9 @@ _Example:_
        on an existing target_image or on a template.
     >
     > **OAuth protected:** YES
-    >
+
     > **Parameters:**  
+    
     > > __target_image__ - UUID or URL 
     > > __template__ - string representation of XML document, UUID, or URL 
     > > __target__ - target cloud to build for 
