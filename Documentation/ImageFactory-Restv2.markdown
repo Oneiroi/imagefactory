@@ -80,9 +80,9 @@ _Example:_
     >
     > **Parameters:**  
     
-    > > __template__ - string representation of XML document, UUID, or URL
+    > > __template__ - string representation of XML document, UUID, or URL 
     > > __callback_url__ - A REST endpoint to post status updates to 
-    > > __parameters__ - additional parameters that may influence the build 
+    > > __parameters__ - additional parameters that may influence the build
     >
     > **Responses:**  
     
@@ -115,11 +115,11 @@ _Example:_
     > **OAuth protected:** YES
     >
     > **Parameters:**  
-    > > __base_image__ - UUID or URL
-    > > __template__ - string representation of XML document, UUID, or URL
-    > > __target__ - target cloud to build for
+    > > __base_image__ - UUID or URL 
+    > > __template__ - string representation of XML document, UUID, or URL 
+    > > __target__ - target cloud to build for 
     > > __callback_url__ - A REST endpoint to post status updates to 
-    > > __parameters__ - additional parameters that may influence the build 
+    > > __parameters__ - additional parameters that may influence the build
     >
     > Note: Users must supply either a template or a base image but not both.
     
@@ -148,12 +148,12 @@ _Example:_
     > **OAuth protected:** YES
     >
     > **Parameters:**  
-    > > __target_image__ - UUID or URL
-    > > __template__ - string representation of XML document, UUID, or URL
-    > > __target__ - target cloud to build for
-    > > __snapshot__ - boolean indicating if this provider_image should be a snapshot-style image
+    > > __target_image__ - UUID or URL 
+    > > __template__ - string representation of XML document, UUID, or URL 
+    > > __target__ - target cloud to build for 
+    > > __snapshot__ - boolean indicating if this provider_image should be a snapshot-style image 
     > > __callback_url__ - A REST endpoint to post status updates to 
-    > > __parameters__ - additional parameters that may influence the build 
+    > > __parameters__ - additional parameters that may influence the build
     >
     > Note: If snapshot is false, users must supply either a template or a target_image but not
       both.  If snapshot is true, users must only supply a template.
