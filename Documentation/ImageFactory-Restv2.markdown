@@ -1,46 +1,5 @@
-% IMAGEFACTORY REST API(1) Version 1.0 - February 10, 2012
+% IMAGEFACTORY REST API(1) Version 2.0 EARLY DRAFT - March 12, 2012
 
-Image Factory is the ideal system image creation engine for any application that needs to support a variety of virtualization and cloud services. Our REST API provides developers with a straightforward and easy way to develop solutions on top of Image Factory. This document describes the Image Factory REST API for building and pushing images as well as getting the status of builder operations.
-
-## Starting imagefactory in REST mode
-
----
-
-*   To use the REST API, imagefactory must be started with the `--rest` command line argument. 
-    *   _DEFAULT_: imagefactory listens on port 8075.
-    *   `--port` can be specified on the command line to change the port imagefactory listens on.
-*   _DEFAULT_: imagefactory will use SSL and generate a self signed key. 
-    *   `--no_ssl` can be specified on the command line to turn off SSL.
-    *   `--ssl_pem` can be used on the command line to specify the path to a different certificate.
-*   _DEFAULT_: imagefactory uses OAuth to authenticate connections.
-    *   `--no_oauth` can be specified on the command line to turn off OAuth.
-    *   More detail on how Image Factory uses OAuth can be found [below](#oauth)
-
-**NOTE:** As an alternative to specifying arguments on the command line, options can be set in the imagefactory configuration file. Just leave the dashes off of the option name.
-
-## Using the Image Factory REST API
-
----
-
-To use the Image Factory REST API, send an HTTP request to any of the [resources][] Image Factory provides.  Each resource supports one or more of the stand HTTP methods (POST, GET, PUT, DELETE) which map to the operations Create, Read, Update, and Delete. More detail on what methods are supported and what parameters are required by each resource can be found in the [resources][] section.
-
-Responses are formatted as JSON in all cases.  POST requests can also be formatted as JSON if the HTTP header, `Content-Type`, is set to `application/json`. Response contents are documented for each specific resource in the [resources][] section.
-
-
-<a id="oauth"></a>
-## OAuth Authentication
-
----
-
-Image Factory uses two-legged OAuth to protect writable operations from unauthorized access. This means that even when OAuth is configured and enabled, Image Factory allows all read-only requests. This makes it simple to use any browser to get a quick status of current builder activity.
-
-Any number of consumer_key / shared_secret pairs can be used. Just add these to the `clients` section of the `imagefactory.conf` file.
-
-_Example:_  
-    `"clients": {
-        "client1": "our-secret",
-        "client2": "just-between-us"
-    }`
 
 <a id="resources"></a>
 ## Resources
@@ -115,11 +74,11 @@ _Example:_
     > **OAuth protected:** YES
     > 
     > **Parameters:**  
-    > > __base_image__ - UUID or URL 
-    > > __template__ - string representation of XML document, UUID, or URL 
-    > > __target__ - target cloud to build for 
-    > > __callback_url__ - A REST endpoint to post status updates to 
-    > > __parameters__ - additional parameters that may influence the build
+    > > __base_image__ - UUID or URL  
+    > > __template__ - string representation of XML document, UUID, or URL  
+    > > __target__ - target cloud to build for  
+    > > __callback_url__ - A REST endpoint to post status updates to  
+    > > __parameters__ - additional parameters that may influence the build  
     >
     > Note: Users must supply either a template or a base image but not both.
     >
@@ -149,12 +108,12 @@ _Example:_
     >
     > **Parameters:**
     >
-    > > __target_image__ - UUID or URL 
-    > > __template__ - string representation of XML document, UUID, or URL 
-    > > __target__ - target cloud to build for 
-    > > __snapshot__ - boolean indicating if this provider_image should be a snapshot-style image 
-    > > __callback_url__ - A REST endpoint to post status updates to 
-    > > __parameters__ - additional parameters that may influence the build
+    > > __target_image__ - UUID or URL  
+    > > __template__ - string representation of XML document, UUID, or URL  
+    > > __target__ - target cloud to build for  
+    > > __snapshot__ - boolean indicating if this provider_image should be a snapshot-style image  
+    > > __callback_url__ - A REST endpoint to post status updates to  
+    > > __parameters__ - additional parameters that may influence the build  
     >
     > Note: If snapshot is false, users must supply either a template or a target_image but not
       both.  If snapshot is true, users must only supply a template.
