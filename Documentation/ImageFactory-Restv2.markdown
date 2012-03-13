@@ -129,7 +129,8 @@
         % curl -d "target_image=bde09e1b-047a-4d6a-aaf8-363c7dbf3391&target=ec2-us-west-2"
     >
     >  
-    >  {"_type": "provider_image", "href": "http://imgfac-host:8075/imagefactory/provider_images
+    >  
+       {"_type": "provider_image", "href": "http://imgfac-host:8075/imagefactory/provider_images
         /d813666d-4d5b-4e65-b140-8145db4c0715", "id": "d813666d-4d5b-4e65-b140-8145db4c0715"}
 
 
