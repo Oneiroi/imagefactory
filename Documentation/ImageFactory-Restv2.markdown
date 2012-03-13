@@ -79,13 +79,13 @@ _Example:_
     > **OAuth protected:** YES
     >
     > **Parameters:** 
-    
+    >
     > > __template__ - string representation of XML document, UUID, or URL 
     > > __callback_url__ - A REST endpoint to post status updates to 
     > > __parameters__ - additional parameters that may influence the build
     >
     > **Responses:**  
-    
+    >
     > > __202__ - New base_image  
     > > __400__ - Missing parameters  
     > > __500__ - Error building image
@@ -113,7 +113,7 @@ _Example:_
        either an existing base image or on a newly supplied template.
     >
     > **OAuth protected:** YES
-    
+    > 
     > **Parameters:**  
     > > __base_image__ - UUID or URL 
     > > __template__ - string representation of XML document, UUID, or URL 
@@ -122,16 +122,16 @@ _Example:_
     > > __parameters__ - additional parameters that may influence the build
     >
     > Note: Users must supply either a template or a base image but not both.
-    
+    >
     > **Responses:**  
-    
+    >
     > > __202__ - New target_image  
     > > __400__ - Missing or extra parameters  
     > > __500__ - Error building image
     >
     > *Example:*  
     >  
-        % curl -d "base_image=0e5b4e6b-c658-4a16-bc71-88293cb1cadf&target=ec2"
+    >   % curl -d "base_image=0e5b4e6b-c658-4a16-bc71-88293cb1cadf&target=ec2"
     >
     >  
         {"_type": "target_image", "href": "http://imgfac-host:8075/imagefactory/target_images
@@ -146,9 +146,9 @@ _Example:_
        on an existing target_image or on a template.
     >
     > **OAuth protected:** YES
-
-    > **Parameters:**  
-    
+    >
+    > **Parameters:**
+    >
     > > __target_image__ - UUID or URL 
     > > __template__ - string representation of XML document, UUID, or URL 
     > > __target__ - target cloud to build for 
@@ -158,9 +158,9 @@ _Example:_
     >
     > Note: If snapshot is false, users must supply either a template or a target_image but not
       both.  If snapshot is true, users must only supply a template.
-    
+    >
     > **Responses:**  
-    
+    >
     > > __202__ - New provider_image  
     > > __400__ - Missing or extra parameters  
     > > __500__ - Error building image
@@ -170,7 +170,7 @@ _Example:_
         % curl -d "target_image=bde09e1b-047a-4d6a-aaf8-363c7dbf3391&target=ec2-us-west-2"
     >
     >  
-        {"_type": "provider_image", "href": "http://imgfac-host:8075/imagefactory/provider_images
+    >  {"_type": "provider_image", "href": "http://imgfac-host:8075/imagefactory/provider_images
         /d813666d-4d5b-4e65-b140-8145db4c0715", "id": "d813666d-4d5b-4e65-b140-8145db4c0715"}
 
 
