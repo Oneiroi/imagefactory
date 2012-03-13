@@ -80,9 +80,9 @@ _Example:_
     >
     > **Parameters:** 
     >
-    > > __template__ - string representation of XML document, UUID, or URL 
-    > > __callback_url__ - A REST endpoint to post status updates to 
-    > > __parameters__ - additional parameters that may influence the build
+    > > __template__ - string representation of XML document, UUID, or URL  
+    > > __callback_url__ - A REST endpoint to post status updates to  
+    > > __parameters__ - additional parameters that may influence the build  
     >
     > **Responses:**  
     >
