@@ -74,6 +74,7 @@
     > **OAuth protected:** YES
     > 
     > **Parameters:**  
+    >
     > > __base_image__ - UUID or URL  
     > > __template__ - string representation of XML document, UUID, or URL  
     > > __target__ - target cloud to build for  
@@ -90,7 +91,7 @@
     >
     > *Example:*  
     >  
-    >   % curl -d "base_image=0e5b4e6b-c658-4a16-bc71-88293cb1cadf&target=ec2"
+        % curl -d "base_image=0e5b4e6b-c658-4a16-bc71-88293cb1cadf&target=ec2"
     >
     >  
         {"_type": "target_image", "href": "http://imgfac-host:8075/imagefactory/target_images
@@ -130,7 +131,7 @@
     >
     >  
     >  
-       {"_type": "provider_image", "href": "http://imgfac-host:8075/imagefactory/provider_images
+        {"_type": "provider_image", "href": "http://imgfac-host:8075/imagefactory/provider_images
         /d813666d-4d5b-4e65-b140-8145db4c0715", "id": "d813666d-4d5b-4e65-b140-8145db4c0715"}
 
 
