@@ -111,7 +111,7 @@
     >
     > > __target_image__ - UUID or URL  
     > > __template__ - string representation of XML document, UUID, or URL  
-    > > __target__ - target cloud to build for  
+    > > __provider__ - provider to create a new launcahble image on  
     > > __snapshot__ - boolean indicating if this provider_image should be a snapshot-style image  
     > > __callback_url__ - A REST endpoint to post status updates to  
     > > __parameters__ - additional parameters that may influence the build  
